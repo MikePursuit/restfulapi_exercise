@@ -9,21 +9,22 @@
 ### Endpoints
 
 #### Users
-| Method | Endpoint                 | 
-|--------|--------------------------|
-| `GET`  | `/users`                 |
-| `GET`  | `/users/<user-username>` |
-| `POST` | `/users/signup`          |
+| Method | Endpoint           | What does this do? |
+|--------|--------------------|--------------------|
+| `GET`  | `/users`           | `Displays JSON file with payload object.`|
+| `GET`  | `/users/<user-id>` | `I got an error if the user didnt exist. Got the JSON for a user if i put theirname.`|
+| `POST`  | `/users/signup`   | `Creates a new user.`|
 
 #### Todos
-| Method   | Endpoint           | Possible Query Params |
-|----------|--------------------|-----------------------|
-| `GET`    | `/todos`           | `username=<username>`, `completed=<true\|false>`
-| `POST`   | `/todos`           ||
-| `GET`    | `/todos/<todo-id>` ||
-| `PUT`    | `/todos/<todo-id>` ||
-| `PATCH`  | `/todos/<todo-id>` ||
-| `DELETE` | `/todos/<todo-id>` ||
+| Method   | Endpoint           | What does this do? | Possible Query Params |
+|----------|--------------------|--------------------|-----------------------|
+| `GET`    | `/todos`           | `Shows a list of all todos`| `username=<username>`, `completed=<true|false> `
+| `POST`   | `/todos`           | `Adds a todo given the owner and text`||
+| `GET`    | `/todos/<todo-id>` | `Get a specific todo item`||
+| `PUT`    | `/todos/<todo-id>` | `Replaces an existing todo item`||
+| `PATCH`  | `/todos/<todo-id>` | `Modifies a part of the todo item`||
+| `DELETE` | `/todos/<todo-id>` | `Deletes a todo item`||
+
 
 ## Tasks
 1. Try out all the requests that are possible with this API. For all the possible requests create a list like the following.
